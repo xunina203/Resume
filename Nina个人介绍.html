@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nina个人介绍</title>
+  <style>
+    :root {
+      --text: #2f2f2f;
+      --muted: #8c8c8c;
+      --light: #f7f8fa;
+      --green: #07c160;
+      --green-light: #e8f7ef;
+      --border: #eaeaea;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f5f5;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.8;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+      padding: 36px 22px 56px;
+    }
+
+    .article {
+      max-width: 677px;
+      margin: 0 auto;
+    }
+
+    .title {
+      margin: 0 0 12px;
+      font-size: 26px;
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #111;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .meta strong {
+      color: #576b95;
+      font-weight: 400;
+    }
+
+    .cover {
+      margin: 22px 0 32px;
+      padding: 28px 24px;
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(7, 193, 96, 0.14), rgba(7, 193, 96, 0)),
+        linear-gradient(180deg, #fbfffd, #f7f8fa);
+      border: 1px solid var(--border);
+    }
+
+    .cover-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--green-light);
+      color: #168044;
+      font-size: 13px;
+    }
+
+    .cover h2 {
+      margin: 0 0 12px;
+      font-size: 23px;
+      line-height: 1.45;
+    }
+
+    .cover p {
+      margin: 0;
+      color: #4b4b4b;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 18px;
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    .section-title {
+      margin: 34px 0 18px;
+      text-align: center;
+    }
+
+    .section-title span {
+      display: inline-block;
+      padding: 0 8px 8px;
+      border-bottom: 3px solid var(--green);
+      font-size: 19px;
+      font-weight: 700;
+      color: #1f1f1f;
+    }
+
+    .lead {
+      padding-left: 14px;
+      border-left: 4px solid var(--green);
+      color: #454545;
+      font-weight: 500;
+    }
+
+    .card {
+      margin: 18px 0;
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      color: #1f1f1f;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: #555;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .stat {
+      padding: 18px 12px;
+      border-radius: 14px;
+      background: var(--light);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--green);
+      font-size: 25px;
+      line-height: 1.3;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .timeline {
+      margin: 18px 0 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .timeline li {
+      position: relative;
+      margin: 0 0 14px;
+      padding: 0 0 14px 24px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .timeline strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #1f1f1f;
+    }
+
+    .timeline span {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .quote {
+      margin: 30px 0;
+      padding: 20px;
+      border-radius: 14px;
+      background: #f9f9f9;
+      color: #3f3f3f;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0 4px;
+    }
+
+    .tag {
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: var(--green-light);
+      color: #168044;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 38px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding: 26px 17px 44px;
+      }
+
+      .title {
+        font-size: 23px;
+      }
+
+      .cover {
+        padding: 22px 18px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="article">
+      <h1 class="title">Nina：把复杂制造供应链，变成可控的交付节奏</h1>
+
+      <div class="meta">
+        <span>原创</span>
+        <strong>Nina</strong>
+        <span>个人介绍</span>
+      </div>
+
+      <section class="cover">
+        <span class="cover-label">供应链计划 / 物料计划 / NPI项目交付</span>
+        <h2>10年以上制造业供应链计划与项目交付经验</h2>
+        <p>长期深耕消费电子、智能硬件与复杂制造场景，擅长把 NPI 到 MP、复杂 BOM、关键物料、供应商交付和库存风险串联起来，保障项目按节点落地。</p>
+      </section>
+
+      <p class="lead">如果用一句话介绍 Nina：她不是只“跟物料”的执行者，而是能在多项目、多供应商、多变更的制造环境中，把计划、物控、交付和风险闭环真正跑起来的人。</p>
+
+      <div class="section-title"><span>01｜我的职业主线</span></div>
+
+      <p>Nina 拥有 10 年以上制造业供应链计划、物料计划和项目交付经验，过往经历覆盖富士康、欧普、Meta 和小米相关项目。她长期面对的是新品导入快、BOM 复杂、供应商多、交付压力大、变更频繁的业务环境。</p>
+
+      <p>她的核心能力不是单一采购、单一跟单或单一计划，而是能从 NPI 到 MP 全流程出发，识别关键物料、推进 CTB 齐套、协调供应商交付、跟进库存与呆滞风险，并通过跨部门协同推动异常闭环。</p>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>10年+</strong>
+          <span>制造业供应链经验</span>
+        </div>
+        <div class="stat">
+          <strong>1200+</strong>
+          <span>Meta AR/VR BOM 管理</span>
+        </div>
+        <div class="stat">
+          <strong>50+</strong>
+          <span>供应商协同经验</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>多项目交付达成表现</span>
+        </div>
+      </div>
+
+      <div class="section-title"><span>02｜我做过什么</span></div>
+
+      <ul class="timeline">
+        <li>
+          <strong>富士康｜Apple iPhone NPI 到 MP</strong>
+          <span>参与多款 iPhone 产品从新品导入到量产阶段的物料计划与供应商协同，接触 12000+ 物料和系统化计划管理。</span>
+        </li>
+        <li>
+          <strong>欧普｜工程项目物料计划</strong>
+          <span>负责工程项目物料计划与现场安装进度协同，保障项目物料到货节点，沉淀项目型交付经验。</span>
+        </li>
+        <li>
+          <strong>Meta AR/VR｜复杂 BOM 与库存优化</strong>
+          <span>管理 1200+ BOM、50+ 供应商，跟进关键物料交付、库存策略和缺料风险，推动库存周转提升与成本优化。</span>
+        </li>
+        <li>
+          <strong>小米相关项目｜多项目并行交付</strong>
+          <span>覆盖 330 个项目、210 类关键物料及 31 家客户需求，推进 NPI 到 MP 节点计划、物料齐套和交付风险闭环。</span>
+        </li>
+      </ul>
+
+      <div class="section-title"><span>03｜我的核心优势</span></div>
+
+      <section class="card">
+        <h3>复杂 BOM 与关键物料管理</h3>
+        <p>熟悉从 BOM 拆解、关键料识别、CTB 齐套到缺料预警的完整管理逻辑，能在复杂物料环境中抓住影响交付的关键路径。</p>
+      </section>
+
+      <section class="card">
+        <h3>NPI 到 MP 的项目交付能力</h3>
+        <p>理解新品导入、试产、量产爬坡和稳定交付各阶段的计划重点，能够在需求变化、物料变更和供应风险中推动节点落地。</p>
+      </section>
+
+      <section class="card">
+        <h3>供应商协同与异常闭环</h3>
+        <p>长期对接供应商、采购、工程、制造、品质和客户需求方，擅长建立风险预警、优先级判断和跨部门升级机制。</p>
+      </section>
+
+      <section class="card">
+        <h3>库存控制与经营意识</h3>
+        <p>不仅关注“有没有料”，也关注库存结构是否健康，具备库存周转提升、呆滞物料处理和成本优化意识。</p>
+      </section>
+
+      <div class="section-title"><span>04｜我能带来的价值</span></div>
+
+      <p>面对复杂制造或智能硬件供应链，Nina 能快速把分散的信息整理成清晰的计划节奏：哪些物料影响节点，哪些供应商存在风险，哪些库存需要控制，哪些异常必须升级。</p>
+
+      <p>她适合的方向包括供应链计划、物料计划、PMC、NPI 项目管理、硬件供应链项目管理、生产计划/物控计划等岗位，尤其适合多项目并行、BOM 复杂、供应商多、交付压力强的制造型组织。</p>
+
+      <div class="quote">“我希望把复杂制造供应链里的不确定性，转化成可追踪、可预警、可闭环的交付计划。”</div>
+
+      <div class="tags">
+        <span class="tag">NPI 到 MP</span>
+        <span class="tag">复杂 BOM</span>
+        <span class="tag">CTB 齐套</span>
+        <span class="tag">供应商协同</span>
+        <span class="tag">库存周转</span>
+        <span class="tag">SAP / SRM / GSC</span>
+      </div>
+
+      <div class="footer">本文为个人介绍页面，可用于简历展示、面试资料或个人作品集入口。</div>
+    </article>
+  </main>
+</body>
+</html>
