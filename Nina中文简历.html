@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>徐亚楠 Nina｜中文简历</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #667085;
+      --subtle: #98a2b3;
+      --line: #e4e7ec;
+      --paper: #ffffff;
+      --bg: #f2f4f7;
+      --blue: #175cd3;
+      --blue-soft: #eff8ff;
+      --green: #067647;
+      --green-soft: #ecfdf3;
+      --gold: #b54708;
+      --gold-soft: #fffaeb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.62;
+      background: var(--bg);
+    }
+
+    .resume {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      padding: 18mm 17mm;
+      background: var(--paper);
+      box-shadow: 0 20px 60px rgba(16, 24, 40, 0.12);
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: 0.08em;
+    }
+
+    .headline {
+      margin-top: 8px;
+      color: var(--blue);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 5px;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .summary {
+      margin-top: 14px;
+      padding: 13px 15px;
+      border: 1px solid #b2ddff;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue-soft), #ffffff);
+      font-size: 14px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 7px;
+      margin: 10px 0 12px;
+    }
+
+    .metric {
+      min-height: 56px;
+      padding: 7px 6px;
+      border-radius: 10px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--blue);
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 10.5px;
+      line-height: 1.25;
+    }
+
+    .section {
+      margin-top: 16px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 9px;
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .chip {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .job {
+      margin-top: 12px;
+      padding-bottom: 11px;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .job:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .job-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 5px;
+    }
+
+    .company {
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .role {
+      color: var(--blue);
+      font-weight: 750;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 4px 0;
+      padding-left: 2px;
+    }
+
+    li::marker {
+      color: var(--blue);
+    }
+
+    .highlight {
+      color: var(--gold);
+      font-weight: 750;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .info-card {
+      padding: 11px 13px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+    }
+
+    .info-card strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 14px;
+    }
+
+    .info-card span {
+      color: var(--muted);
+    }
+
+    .note {
+      margin-top: 10px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      background: var(--gold-soft);
+      color: #7a2e0e;
+      font-size: 12px;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      html,
+      body {
+        background: #fff;
+      }
+
+      .resume {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 14mm 15mm;
+        box-shadow: none;
+      }
+
+      .job {
+        break-inside: avoid;
+      }
+    }
+
+    @media screen and (max-width: 820px) {
+      .resume {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 24px 18px;
+      }
+
+      .header,
+      .job-head,
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        align-items: flex-start;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+    <header class="header">
+      <div>
+        <h1>徐亚楠</h1>
+        <div class="headline">供应链计划｜核心物料管理｜NPI 到 MP 项目交付</div>
+      </div>
+      <div class="contact" aria-label="联系方式">
+        <span>xu117nan@163.com</span>
+        <span>(+86) 18437121081</span>
+      </div>
+    </header>
+
+    <section class="summary">
+      10 年以上消费电子与智能硬件供应链计划、物料管理及项目交付经验，服务于小米、Meta（Facebook）、欧普照明、富士康等企业，覆盖手机、AR/VR 智能硬件、小米生态链与照明工程等复杂交付场景。熟悉 MPS/MRP、CTB 齐套、BOM 管理、采购执行、库存控制、供应商协同与 NPI 至 MP 全流程项目交付，深度参与 Apple iPhone、Meta AR/VR 眼镜项目，并主导小米生态链核心品类相关供应链交付，熟练使用 SAP、SRM、GSC、Apple-Nimbus / Nightowl 等系统。
+    </section>
+
+    <section class="metrics" aria-label="关键成果">
+      <div class="metric">
+        <strong>10年+</strong>
+        <span>消费电子与智能硬件供应链经验</span>
+      </div>
+      <div class="metric">
+        <strong>&gt;1000个</strong>
+        <span>小米生态链物料 SKU 管理</span>
+      </div>
+      <div class="metric">
+        <strong>60.3亿</strong>
+        <span>年度集采物料采购交易额</span>
+      </div>
+      <div class="metric">
+        <strong>1200+</strong>
+        <span>Meta AR/VR BOM 物料管理</span>
+      </div>
+      <div class="metric">
+        <strong>6款</strong>
+        <span>Apple iPhone 新品项目参与</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">核心能力</h2>
+      <ul class="chips">
+        <li class="chip">团队管理</li>
+        <li class="chip">MPS / MRP 计划</li>
+        <li class="chip">核心物料管理</li>
+        <li class="chip">BOM 与变更管理</li>
+        <li class="chip">NPI 至 MP 交付</li>
+        <li class="chip">战略备料</li>
+        <li class="chip">供应风险管理</li>
+        <li class="chip">库存周转与呆滞治理</li>
+        <li class="chip">供应商 / 代工厂协同</li>
+        <li class="chip">数字化 / AI 提效</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">工作经历</h2>
+
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <span class="company">小米公司</span>
+            <span class="role">｜物料计划经理</span>
+          </div>
+          <div class="date">2025.03–至今</div>
+        </div>
+        <ul>
+          <li><span class="highlight">团队管理：</span>管理 <span class="highlight">7 人</span>物料计划团队，负责团队任务分工、进度跟进、异常升级与跨部门协同，推动多项目物料计划、交付与库存治理工作按节点落地。</li>
+          <li><span class="highlight">需求与计划管理：</span>负责 MPS 管理及整机需求向物料级需求的拆解，联动销售、项目、采购、供应商及代工厂，滚动校准需求预测、物料齐套与交付优先级，保障 NPI 至 MP 阶段物料按节点交付，年度集采物料采购交易额达 <span class="highlight">60.3 亿元</span>。</li>
+          <li><span class="highlight">BOM 与供应风险管理：</span>协同研发、项目、采购、供应商及代工厂推进 BOM 维护、物料替代、版本切换与量产导入，确保 BOM 变更与物料计划、采购执行、库存消耗同步；围绕核心电子物料建立供应风险清单，跟进供应商产能、交期与保供方案，降低缺料、错料及切换风险。</li>
+          <li><span class="highlight">核心电子物料与战略备料：</span>负责存储、主控、安全芯片、蓝牙芯片等关键电子物料计划与交付管理；针对行业供需波动导致的存储、主控物料紧缺，从 <span class="highlight">0 到 1</span> 搭建战略备料管理机制，将手工报表系统化、看板化，推动 <span class="highlight">30+ 品类、上千个 SKU</span> 的需求、库存、供应与风险一体化呈现，保障战略备料准确性与及时性。</li>
+          <li><span class="highlight">库存与代工厂管理：</span>担任生态链年度盘点总负责人，管理 <span class="highlight">7 家代工厂</span>物料交付、库存治理及集采物料 BOM 切换；持续监控库存水位，建立呆滞物料预警机制，推动物料消耗与风险闭环，优化库存周转效率、减少资金占用，累计节省成本 <span class="highlight">1.3 亿元</span>。</li>
+          <li><span class="highlight">交易模式与流程优化：</span>针对多客户主体、多交易模式并行的物料管理场景，推动客供物料向集采/带材物料切换、不同客户主体间物料调拨等流程落地；梳理并定义新品阶段研发领用物料流程，提升交易切换、物料流转、研发领用及系统执行的一致性与效率。</li>
+          <li><span class="highlight">系统与数字化提效：</span>协同导入 GSC 系统并与 IT 团队迭代系统规则，推动库存呆滞风险降低 <span class="highlight">30%</span>、工作效率提升 <span class="highlight">40%</span>；结合 AI 工具优化物料数据整理、报表生成、异常识别与风险预警流程，提升多品类、多 SKU 管理场景下的数据处理效率与响应速度。</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <span class="company">Facebook (Meta) Shanghai Limited（4DX 外派）</span>
+            <span class="role">｜物料项目经理</span>
+          </div>
+          <div class="date">2022.09–2025.02</div>
+        </div>
+        <ul>
+          <li><span class="highlight">AR/VR 项目物料计划：</span>基于 Meta AR/VR 眼镜项目节奏制定物料需求计划与 CTB 齐套方案，联动生产、研发、品质、采购及供应商，协调物料供应与生产进度，保障项目出货要求达成。</li>
+          <li><span class="highlight">复杂 BOM 与库存管理：</span>管理全套 BOM <span class="highlight">1200+ 颗物料</span>，建立库存水位审核、月度盘点及库存预警机制，处理呆滞物料 <span class="highlight">30+ 批次</span>，推动库存周转率提升 <span class="highlight">30%</span>、库存成本降低 <span class="highlight">10%</span>。</li>
+          <li><span class="highlight">供应商与代工厂协同：</span>对接 <span class="highlight">50+ 家供应商</span>并协同 <span class="highlight">3 家代工厂</span>，跟进关键物料交期、供应异常与交付风险，解决物料供应难题 <span class="highlight">20+ 个</span>，采购准时率达 <span class="highlight">100%</span>。</li>
+          <li><span class="highlight">物料质量与异常闭环：</span>协同品质部门梳理物料质量标准及管控要求，推动来料、试产及生产阶段物料异常识别、升级与闭环，保障物料质量符合项目要求。</li>
+          <li><span class="highlight">成本优化：</span>制定并落地 <span class="highlight">8 项</span>成本控制策略，联合采购部门优化物料采购成本，形成成本改善收益超 <span class="highlight">1500 万元</span>。</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <span class="company">欧普照明股份有限公司</span>
+            <span class="role">｜交付项目经理</span>
+          </div>
+          <div class="date">2021.05–2022.09</div>
+        </div>
+        <ul>
+          <li><span class="highlight">项目型供应链交付：</span>主导两项重大照明工程项目，统筹物料需求计划、供应节奏与现场安装进度，保障 <span class="highlight">7 万平方米</span>工程顺利推进，项目总价值 <span class="highlight">1500 万元</span>，物料按时到货率超 <span class="highlight">95%</span>。</li>
+          <li><span class="highlight">项目库存与风险管理：</span>负责项目物料库存精细运维、月度盘点与动态库存预警，处理呆滞物料 <span class="highlight">20+ 批次</span>，推动库存周转率提升 <span class="highlight">25%</span>、库存成本降低 <span class="highlight">8%</span>。</li>
+          <li><span class="highlight">跨方资源协同：</span>对接投资方、施工方、设计院及工装公司，整合上下游资源并建立稳定合作关系，提升项目交付协同效率。</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <span class="company">富士康科技集团</span>
+            <span class="role">｜采购工程师 / 物料主管</span>
+          </div>
+          <div class="date">2015.07–2021.05</div>
+        </div>
+        <ul>
+          <li><span class="highlight">采购与物控成长路径：</span>毕业后加入富士康，从采购工程师起步，负责原材料下单、供应商交付跟进与采购执行；后转入物控管理，结合原材料供应动态推动生产计划达成，形成从采购执行到物料计划、库存控制的完整供应链能力。</li>
+          <li><span class="highlight">NPI 到 MP 物料管理：</span>累计参与 <span class="highlight">6 个 Apple iPhone</span> 新品发布项目，从 NPI 到 MP 全流程跟进物料计划、CTB 齐套管理、交付、缺料异常与量产切换，累计涉及产品物料种类超 <span class="highlight">12000 颗</span>。</li>
+          <li><span class="highlight">供应商管理与降本：</span>对接并评估供应商超 <span class="highlight">50 家</span>，跟进供应商交付、质量与绩效表现，推动问题改善与成本优化，实现采购成本年降低 <span class="highlight">12%</span>。</li>
+          <li><span class="highlight">异常与数据分析：</span>在 NPI 与 MP 阶段累计处理紧急异常超 <span class="highlight">500 起</span>，提出流程优化建议超 <span class="highlight">20 条</span>。</li>
+          <li><span class="highlight">库存精益管理：</span>根据生产波动调整物料供应计划，库存周转率提升 <span class="highlight">25%</span>、呆滞物料处理效率提高 <span class="highlight">30%</span>、库存成本降低 <span class="highlight">20%</span>；在职期间客户 <span class="highlight">0 投诉</span>。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section two-column">
+      <div>
+        <h2 class="section-title">教育背景</h2>
+        <div class="info-card">
+          <strong>周口师范学院｜国际经济与贸易｜本科</strong>
+          <span>具备国际贸易、供应链协同与商务沟通相关知识基础。</span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="section-title">证书</h2>
+        <div class="info-card">
+          <strong>PMP 项目管理认证</strong>
+          <span>高级教师资格证｜会计证书｜银行从业证书</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
