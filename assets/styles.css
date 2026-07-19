@@ -325,6 +325,9 @@ button {
   align-items: flex-end;
   justify-content: flex-end;
   padding: 52px 42px;
+  background:
+    linear-gradient(180deg, rgba(8, 21, 33, 0.18), rgba(8, 21, 33, 0.42)),
+    url("hero-illustration.png") center/cover no-repeat;
 }
 
 .orbit {
